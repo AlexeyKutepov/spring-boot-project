@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link th:href="@{/css/bootstrap.min.css}" href="../css/bootstrap.min.css"  rel="stylesheet" type="text/css"  />
+    <link th:href="@{/css/style.css}" href="../css/style.css"  rel="stylesheet" type="text/css"  />
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>UserId</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="am : ${messages}">
+                <td th:text="${am.id}"></td>
+                <td th:text="${am.userId}"></td>
+                <td th:text="${am.title}"></td>
+                <td th:text="${am.body}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
